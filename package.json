@@ -1,31 +1,39 @@
 {
   "name": "react-parcel",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/iamgique/react-parcel.git",
   "author": "iamgique <iamgique@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel -p 1234 public/index.html",
-    "build": "parcel build public/index.html -d build --public-url ./ --no-source-maps",
+    "dev": "parcel public/index.html --port 1234",
+    "build": "parcel build public/index.html --dist-dir build --public-url ./ --no-source-maps",
     "test": "jest",
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^30.5.2",
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "reactstrap": "^8.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.29.6",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "jest": "^24.9.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "jest-transform-stub": "^2.0.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.22.12"
+    "parcel": "^2.16.4",
+    "sass": "^1.22.12",
+    "@parcel/transformer-sass": "^2.16.4"
+  },
+  "resolutions": {
+    "debug": "^4.3.1",
+    "braces": "^3.0.3",
+    "**/@babel/preset-env/semver": "^5.7.2",
+    "**/core-js-compat/semver": "^6.3.1",
+    "**/anymatch/picomatch": "^2.3.2"
   }
 }
